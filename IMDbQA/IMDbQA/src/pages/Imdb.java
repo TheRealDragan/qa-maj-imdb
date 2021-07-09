@@ -17,12 +17,5 @@ public class Imdb {
 			}		
 			return _signInPage;
 		}
-		private CreateNewAccount _createNewAccount;
-
-		public CreateNewAccount createNewAccount() {
-			if (_createNewAccount == null) {
-				_createNewAccount = new CreateNewAccount();
-			}		
-			return _createNewAccount;
-	}
+	
 }

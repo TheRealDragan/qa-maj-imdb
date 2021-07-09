@@ -1,14 +1,14 @@
 package pages;
 
-public class HomePage extends BasePage {
-	private String searchBar = "Search Bar";
-	private String signInButton = "Sign In Button";
-	private String searchButton = "Search Button";
+import org.openqa.selenium.WebElement;
 
-	 public void getSearchBar(){         
-		 printMessage(searchBar);
-		 }
-	public void getSignInButton(){         
-		printMessage(signInButton);
-	 }
+public class HomePage extends BasePage {
+
+	public WebElement searchBar() {
+		return findElement("//input[@id='suggestion-search']");
+	}
+	
+	public WebElement getSignInButton() {
+		return findElement("//div[contains(text(),'Sign In')]");
+	}
 }

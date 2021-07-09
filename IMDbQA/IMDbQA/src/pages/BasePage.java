@@ -1,8 +1,12 @@
 package pages;
 
-public class BasePage {
-	public void printMessage(String message) {
-		System.out.println("Now writing the passed message: " + message);
-	}
+import org.openqa.selenium.WebElement;
 
+import browser.Browser;
+
+public class BasePage {
+	
+	public static WebElement findElement(String xpath) {
+		return Browser.getBrowser().findElementByXPath(xpath);
+	}
 }
